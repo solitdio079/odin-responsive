@@ -43,6 +43,7 @@ header{
 }
 .about-text p{
     font-size: 1.2rem;
+    color: #555;
 }
 
 .about-img{
@@ -129,12 +130,58 @@ main{
     font-size: 1.75rem;
 }
 
-@media (max-width: 630px) {
+/*-- Footer --*/
+footer{
+    padding: 2rem;
+    position: relative;
+    background-color: cornflowerblue;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+}
+footer .footer-text h1{
+    font-size: 3rem;
+    font-weight: 400;
+
+}
+footer .footer-text p{
+    font-size: 1.5rem;
+    font-family: "Roboto";
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+footer .footer-text p i {
+    color: black;
+    font-size: 2.5rem;
+}
+footer figure img {
+    max-height: 500px;
+}
+
+
+
+/* 2. Medium screens (tablet) */
+@media (max-width: 992px) {
+    /* styles for tablets */
+     /* Header */
+     .about-img{
+        position: relative;
+        min-width: 50%;
+    }
+    /*-- Main --*/
+    .project-container{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 3rem;
+        justify-items: center;
+    }
+
+  }
+  @media (max-width: 768px) {
     /* Header */
     .header-content{
-      
-        flex-direction: column;
-        
+        flex-direction: column;      
     }
     /*-- Main --*/
     .project-container{
@@ -142,6 +189,15 @@ main{
         grid-template-columns: repeat(1,1fr);
         gap: 3rem;
         justify-items: center;
-        
     }
-  }
+
+    /* -- footer --*/
+    footer{
+       
+        flex-direction: column;
+      
+    }
+    footer .footer-text p svg {
+       display: none;
+    }
+}
