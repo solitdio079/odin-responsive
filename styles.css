@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: "Playfair Display", "Roboto";
+    margin: 0;
+    padding: 0;
+}
+figure{
+    margin: 0;
+    padding: 0;
+}
+header{
+    padding: 2rem;
+    position: relative;
+}
+.skewed-bg{
+    position: absolute;
+    transform: skewY(-20deg);
+    width: 100%;
+    height: 120%;
+    top: -60%;
+    left: 0;
+    z-index: -1;
+    background-color:cornflowerblue;
+}
+.header-content{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    gap: 0px;
+}
+
+.about-text{
+    background-color: white;
+    padding: 1.5rem;
+    box-shadow: 1px 5px 5px #ccc;
+}
+.about-text h1{
+    font-weight: 300;
+}
+.about-text p{
+    font-size: 1.2rem;
+}
+
+.about-img{
+    position: relative;
+}
+.about-img img{
+    max-width: 100%;
+}
+.about-img .about-name{
+    position: absolute;
+    color: white;
+    font-size: 3.25rem;
+    font-weight: 400;
+    bottom: 5px;
+    left: 5%;
+    
+}
+.about-icons{
+    display: flex;
+    gap: 10px;
+    justify-content: end;
+}
+.about-icons i {
+    font-size: 1.2rem;
+}
+
+/* -- Main section --- */
+main{
+    padding: 2rem;
+    margin: 5rem auto;
+    position: relative;
+
+}
+.main-title{
+    font-weight: 400;
+}
+.project-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 3rem;
+    
+}
+
+.project-card .figure{
+    width: 100%;
+    text-align: center;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 300px;
+    padding: 2rem;
+}
+
+.project-card .figure h3 {
+    font-weight: 400;
+    font-size: 3.75rem;
+}
+.project-card .card-body{
+    background-color: white;
+    box-shadow: 1px 5px 5px #ccc;
+    padding: 0.5rem 1rem 2rem 1rem;
+}
+.project-card .card-body p{
+    font-size: 1.5rem;
+    color: #999;
+}
+
+.project-card .card-body .card-title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.project-card .card-body .card-title .title-icons{
+    display: flex;
+    gap: .5rem;
+}
+.project-card .card-body .card-title .title-icons i{
+    font-size: 25px;
+}
+
+.project-card .card-body .card-title h3{
+    font-weight: 400;
+    font-size: 1.75rem;
+}
+
+@media (max-width: 630px) {
+    /* Header */
+    .header-content{
+      
+        flex-direction: column;
+        
+    }
+    /*-- Main --*/
+    .project-container{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        gap: 3rem;
+        justify-items: center;
+        
+    }
+  }
